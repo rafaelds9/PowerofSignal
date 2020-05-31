@@ -2,7 +2,6 @@ import numpy as np
 from matplotlib import pyplot as plt
 from scipy.io import loadmat
 from scipy import integrate
-import pandas as pd
 
 
 # Function to select the points of interest in the ECG curve
