@@ -63,7 +63,7 @@ for it in range(2):
         sqrAbsSignal = np.power(np.abs(atrialFib[pointsECG[it][0]:pointsECG[it][1]+1]), 2) 
 
     power = round((1/(pointsECG[it][1]-pointsECG[it][0]+1))*np.sum(sqrAbsSignal),2)
-    print("\tPower: ", power, " (mV)²\n")
+    print("\tPower: ", power, "\n")
     #
 
     #Plotting    
@@ -75,11 +75,11 @@ for it in range(2):
         ax.set_title('Fibrilação Atrial')
         plt.plot(atrialFib)
    
-    auxPrint = "Potência = " + str(power) + "mV²"
+    auxPrint = "Potência = " + str(power)
     plt.text(pointsECG[it][0]+5, 6, auxPrint, fontsize = 11)
 
     ax.set_xlabel("Amostra [n]")
-    ax.set_ylabel("Tensão (mV)")
+    ax.set_ylabel("x[n]")
     
 
     ax.axvline(x=pointsECG[it][0], c = "r")
